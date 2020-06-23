@@ -2,12 +2,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const { json } = require("body-parser");
 
 
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
@@ -19,11 +21,16 @@ const aboutPageContent = "Ut ac ornare sapien, vel posuere ipsum. Sed pharetra d
 const contactPageContent = "Proin at erat rutrum, fringilla nisi id, placerat lectus. Duis at suscipit quam, in cursus nulla. Maecenas elementum leo ut orci tempor, sed vehicula lectus rhoncus. Vivamus feugiat massa nec lacus sollicitudin, nec blandit nisl vulputate. Fusce quis magna est. Sed ornare rhoncus nisi et dictum.";
 
 
+let posts = [];
+
+
 
 app.get("/", function(req, res) {
 
-    res.render("home", {homePage: homePageContent});
-       
+    res.render("home", {
+        homePage: homePageContent,
+        posts: posts 
+    });
 });
 
 app.get("/about", function(req, res) {
@@ -39,6 +46,19 @@ app.get("/contact", function(req, res) {
 app.get("/compose", function(req, res) {
 
     res.render("compose");
+});
+
+app.post("/", function(req, res) {
+
+    let postPublish = {
+       title: req.body.postTitle,
+       body: req.body.postBody
+    }; 
+
+    posts.push(postPublish);
+
+    res.redirect("/");
+   
 });
 
 app.listen(3000, function() {
