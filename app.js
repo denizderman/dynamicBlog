@@ -29,7 +29,7 @@ app.get("/", function(req, res) {
 
     res.render("home", {
         homePage: homePageContent,
-        posts: posts 
+        composePagePost: posts 
     });
 });
 

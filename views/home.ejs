@@ -5,6 +5,11 @@
 
         <p><%= homePage %></p> 
 
-       <% console.log(posts); %>
+   
+       <% for (var i = 0; i < composePagePost.length; i++) { %>
+
+        <%= console.log(composePagePost[i].title) %>
+
+        <%  } %>
        
 <%- include("partials/footer"); -%>
