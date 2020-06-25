@@ -27,10 +27,14 @@ let posts = [];
 
 app.get("/", function(req, res) {
 
-    res.render("home", {
+      res.render("home", {
         homePage: homePageContent,
-        composePagePost: posts 
+        pagePosts: posts,
     });
+});
+
+app.get("/posts/:postId", function(req, res) {
+    console.log(req.params.postId);
 });
 
 app.get("/about", function(req, res) {
@@ -58,6 +62,7 @@ app.post("/", function(req, res) {
     posts.push(postPublish);
 
     res.redirect("/");
+   
    
 });
 
