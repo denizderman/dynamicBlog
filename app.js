@@ -3,12 +3,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const { json } = require("body-parser");
+const _ = require("lodash");
 
 
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -24,48 +25,67 @@ const contactPageContent = "Proin at erat rutrum, fringilla nisi id, placerat le
 let posts = [];
 
 
+app.get("/", function (req, res) {
 
-app.get("/", function(req, res) {
-
-      res.render("home", {
+    res.render("home", {
         homePage: homePageContent,
         pagePosts: posts,
     });
 });
 
-app.get("/posts/:postId", function(req, res) {
-    console.log(req.params.postId);
+
+app.get("/posts/:postId", function (req, res) {
+    const requestedTitle = _.lowerCase(req.params.postId);
+
+    
+
+    posts.forEach(function (postPublish) {
+
+        
+        const storedTitle = _.lowerCase(postPublish.title);
+
+        if (requestedTitle == storedTitle) {
+
+            res.render("post", {
+                postTopicTitle: postPublish.title,
+                postTopicBody: postPublish.body
+            });
+        } 
+    });
 });
 
-app.get("/about", function(req, res) {
 
-    res.render("about", {aboutPage: aboutPageContent});
+app.get("/about", function (req, res) {
+
+    res.render("about", { aboutPage: aboutPageContent });
 });
 
-app.get("/contact", function(req, res) {
 
-    res.render("contact", {contactPage: contactPageContent});
+app.get("/contact", function (req, res) {
+
+    res.render("contact", { contactPage: contactPageContent });
 });
 
-app.get("/compose", function(req, res) {
+
+app.get("/compose", function (req, res) {
 
     res.render("compose");
 });
 
-app.post("/", function(req, res) {
 
-    let postPublish = {
-       title: req.body.postTitle,
-       body: req.body.postBody
-    }; 
+app.post("/", function (req, res) {
+
+
+    const postPublish = {
+        title: req.body.postTitle,
+        body: req.body.postBody,
+    };
 
     posts.push(postPublish);
 
     res.redirect("/");
-   
-   
 });
 
-app.listen(3000, function() {
+app.listen(3000, function () {
     console.log("Server started on port 3000");
 });
