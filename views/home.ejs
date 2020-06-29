@@ -1,24 +1,38 @@
-
 <%- include("partials/header"); -%>
 
-        <h1>Home</h1>
-        
-        <p><%= homePage %></p> 
+<div id="page-content">
 
-        <%  pagePosts.forEach(myFunction); %>
 
-        <%  function myFunction(post) { %>
+        <div class="row">
+                <div class="col-9">
+                        <h1>My Motto</h1>
 
-         <h1> <%= post.title; %> </h1>
-         <p> 
+                        <p class="motto"><i><%= homePage %></i></p>
 
-           <%= post.body.substring(0, 100) + "..."; %> 
-         
-           <a href="/posts/<%= post.title %>">Read More</a>
-        
-        </p>
-         
-        <%  } %>
+                        <p class="posts">My Posts</p>
 
-  
+                        <%  pagePosts.forEach(myFunction); %>
+                        <%  function myFunction(post) { %>
+
+                        <h1> <%= post.title; %> </h1>
+                        
+                        <p>
+                                <%= post.body.substring(0, 100) + "..."; %>
+                                <a href="/posts/<%= post.title %>">Read More</a>
+                        </p>
+                        <%  } %>
+                </div>
+                <div class="col-3">
+
+                        <img src="images/profilepic.jpg" alt="profilePicture">
+
+                </div>
+        </div>
+
+
+
+</div>
+
+
+
 <%- include("partials/footer"); -%>
