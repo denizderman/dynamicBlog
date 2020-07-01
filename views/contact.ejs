@@ -1,8 +1,33 @@
 
 <%- include("partials/header"); -%>
 
-<h1>Contact</h1>
+<h2 class="contactTitle">Got Questions?</h2>
 
-<p><%= contactPage %></p> 
+<h4 class="contactGet">Get in touch!</h4>
+
+<p class="contactInfoMessage">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper vel lorem ac vulputate. Fusce auctor blandit tellus, nec elementum turpis aliquet ac. Nullam venenatis lacus elementum maximus luctus. Fusce a risus blandit lorem consectetur volutpat. Integer bibendum justo eu consequat laoreet. Aliquam dui tellus, bibendum ut iaculis vel, porta et ipsum. Sed ac felis eros. </p>
+
+<form class="contactForm">
+    <div class="form-group">
+        <label for="name">NAME</label>
+        <input type="text" class="form-control info">
+    </div>
+
+    <div class="form-group">
+        <label for="email">EMAIL</label>
+        <input type="email" class="form-control info">
+    </div>
+
+    <div class="form-group">
+        <label for="textarea">COMMENT</label>
+        <textarea class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-dark ">SEND</button>
+    </div>
+    
+
+</form>
+
 
 <%- include("partials/footer"); -%>

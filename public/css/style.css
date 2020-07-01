@@ -1,6 +1,7 @@
+
 body {
-   line-height: 1.5;
-   font-family: 'Titillium Web', sans-serif;
+    line-height: 1.5;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 /* NavBar */
@@ -101,6 +102,47 @@ body {
 }
 
 
+/*contact ejs */
+
+.contactTitle, .contactGet {
+    text-align: center;
+    margin: 50px;
+}
+.contactInfoMessage {
+    width: 80%;
+    margin-left: 100px;
+}
+
+.contactForm {
+    margin: 50px 100px;
+}
+.form-group label {
+    font-weight: 700;
+}
+.info {
+    width: 60%;
+}
+.btn-dark:hover {
+    background-color: #ebb2a2;
+}
+
+/* New Post ejs */
+
+.newPost {
+    text-align: center;
+    margin-top: 40px;
+}
+.composeForm {
+    width: 70%;
+    margin: 30px auto;
+}
+
+/* Post ejs */
+
+.postContent {
+    margin: 50px 150px;
+    text-align: justify;
+}
 
 /* Footer */
 
@@ -109,8 +151,9 @@ body {
     padding: 40px;
     width: 100%;
     margin-bottom: 0px;
-    text-align: center;
+    text-align: center;     
 }
+
 .footer-links li {
     list-style-type: none;
     display: inline;
