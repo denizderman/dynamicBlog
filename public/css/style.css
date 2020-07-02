@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+}
 body {
     line-height: 1.5;
     font-family: 'Titillium Web', sans-serif;
@@ -68,6 +70,8 @@ body {
 }
 
 /* Page contents */
+
+/* Home ejs */
 
 #page-content {
     max-width: 960px;
@@ -183,4 +187,47 @@ body {
 }
 .top a:hover {
     color: #ebb2a2;
+}
+
+
+/* Responsive */
+
+@media only screen 
+
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    .profilePic1 {
+        display: none;
+    }
+    .header-content {
+        font-size: 7vw;
+    }
+    .profilePic2 {
+        margin: 20px 30px 20px;
+    }
+   .mottoTitle {
+       margin-left: 20px;
+   }
+   .motto {
+       margin: 5px 10px 50px 20px;
+   }
+   
+    
+}
+
+
+ @media only screen and (min-device-width: 768px) {
+
+    .mobile-first {
+        display: none;
+    }
+} 
+
+@media only screen and (max-device-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
 }
