@@ -192,12 +192,15 @@ body {
 
 /* Responsive */
 
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
 @media only screen 
 
 and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
 
+    /* home page */
     .profilePic1 {
         display: none;
     }
@@ -213,21 +216,129 @@ and (-webkit-min-device-pixel-ratio: 2) {
    .motto {
        margin: 5px 10px 50px 20px;
    }
-   
-    
+   .footer-links {
+       text-align: left;
+   }
+   .top {
+       text-align: center;
+       margin-top: 20px;
+   }
+   .social-media-home {
+       padding-top: 18px;
+       position: unset;
+       left: 0em;
+   }
+
+   /* about page */
+
+   .hobbyimg {
+       float: none;
+       margin-left: 10px;
+       margin-top: 20px;
+       padding: 20px;
+       width: 90%;
+   }
+   .about-paragraph {
+       width: 300px;
+       margin: 10px auto;
+       text-align: justify;
+       padding: 30px;
+   }
+
+   /* contact page */
+
+   .contactInfoMessage {
+        width: 300px;
+        text-align: justify;
+        margin-left: 10px;
+        padding: 10px;
+   }
+   .contactForm {
+       width: 80%;
+       margin-left: 20px;
+   }
 }
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+     
+      /* home page */
+    .footer-links {
+        width: 80%;
+    }
+
+    /* about page */
+    .about-paragraph {
+        width: 375px;
+    }
+
+    /* contact page */
+
+    .contactInfoMessage {
+        width: 90%;
+        margin-top: -20px;
+    }
+ }
+
+ /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+ @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+    
+      /* home page */
+    .footer-links {
+        width: 70%;
+    }
+        
+ }
+
+ /* ----------- iPhone X ----------- */
+
+ @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+        
+        /* Home page */
+    .motto {
+        margin: 5px 15px 50px 20px;
+    }
+ }
+
+  /* ----------- iPad ----------- */
+
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+        /* Home page BURDASIN */
+    .row-desktop {
+        
+    }
+ }
+
+
+
+
 
 
  @media only screen and (min-device-width: 768px) {
 
-    .mobile-first {
+    .mobile-first, .social-media-home {
         display: none;
     }
+    
 } 
 
 @media only screen and (max-device-width: 768px) {
     .desktop {
         display: none;
     }
-
+    
 }
