@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 body {
+    height: 100%;
+    margin: 0px;
     line-height: 1.5;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -180,7 +182,8 @@ body {
     font-size: 40px;
 }
 .top {
-  text-align: right;
+  text-align: center;
+  margin-top: 10px;
 }
 .top a {
     color: #b86551;
@@ -200,7 +203,7 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
 
-    /* home page */
+     /* home page */
     .profilePic1 {
         display: none;
     }
@@ -257,6 +260,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
        width: 80%;
        margin-left: 20px;
    }
+
+   /* blog posts */
+    
+  .post-title, .post-body {
+      margin: 5px 15px;
+  }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -317,14 +326,93 @@ and (-webkit-min-device-pixel-ratio: 2) {
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 1) {
 
-        /* Home page BURDASIN */
-    .row-desktop {
-        
+        /* Home page */
+    .desktop {
+        margin-top: 30px;
+    }    
+    .col-9 {
+        max-width: 45%;
+        margin-left: 5%;
     }
+    .top {
+        text-align: center;
+        margin-top: 10px;
+    }
+   
+    /* About Page */
+    .hobbyimg {
+        float: none;
+        display: block;
+        margin: -10px auto;
+        width: 50%;
+    }
+    .about-paragraph {
+        width: 90%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    /* New Post page */
+    .composeForm {
+       padding-bottom: 160px;
+    }
+  }
+
+
+
+
+    /* ----------- iPad PRO ----------- */
+    @media only screen 
+    and (min-device-width: 1024px)
+    and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .posts {
+            padding-bottom: 277px;
+        }
+        .about-paragraph {
+            padding-bottom: 229px;
+        }
+        .contactForm {
+            padding-bottom: 136px;
+        }
+        .composeForm {
+            padding-bottom: 503px;
+        }
+    }
+
+ /* ----------- Laptops ----------- */
+
+ @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+      .hobbyimg {
+          margin-left: 230px;
+      }
+}
+
+ @media only screen 
+ and (min-device-width: 1600px)
+ and (max-device-height: 900px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .hobbyimg {
+        margin-left: 400px;
+    }
+    .composeForm {
+        padding-bottom: 85px;
+    }
+
  }
 
-
-
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 1024px) {
+        .social-media {
+            display: none;
+        }
+    }
 
 
 
@@ -336,7 +424,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     
 } 
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 760px) {
     .desktop {
         display: none;
     }

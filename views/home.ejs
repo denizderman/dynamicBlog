@@ -53,9 +53,9 @@
                 <%  pagePosts.forEach(myFunction); %>
                         <%  function myFunction(post) { %>
 
-                        <h1> <%= post.title; %> </h1>
+                        <h1 class="post-title"> <%= post.title; %> </h1>
                         
-                        <p>
+                        <p class="post-body">
                                 <%= post.body.substring(0, 100) + "..."; %>
                                 <a href="/posts/<%= post.title %>">Read More</a>
                         </p>
