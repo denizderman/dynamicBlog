@@ -236,10 +236,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
    .hobbyimg {
        float: none;
-       margin-left: 10px;
-       margin-top: 20px;
-       padding: 20px;
-       width: 90%;
+       display: block;
+       margin-right: auto;
+       margin-left: auto;
+       width: 90%
    }
    .about-paragraph {
        width: 300px;
@@ -266,7 +266,23 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .post-title, .post-body {
       margin: 5px 15px;
   }
+  .postContent {
+      margin: 15px auto;
+      padding-right: 20px;
+      padding-left: 20px;
+  }
 }
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (orientation: landscape) {
+
+        .about-paragraph {
+           width: 540px !important;
+        }
+    }
+
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -293,6 +309,22 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
  }
 
+ @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (orientation: landscape) {
+
+    .contactInfoMessage {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: justify;
+    }
+    .contactForm {
+        margin-left: 35px;
+    }
+
+}
+
  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
  @media only screen
     and (min-device-width: 414px)
@@ -306,6 +338,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
         
  }
 
+ @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (orientation: landscape) {
+
+        .mobile-first {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .hobbyimg {
+            margin-left: 5px;
+        }
+        .about-paragraph {
+            width: auto;
+        }
+        .contactInfoMessage {
+            text-align: justify;
+        }
+    }
+
+    
  /* ----------- iPhone X ----------- */
 
  @media only screen
@@ -356,10 +409,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .composeForm {
        padding-bottom: 160px;
     }
+
+    /* Post page */
+    .postContent {
+        margin: 15px auto;
+        padding-right: 30px;
+        padding-left: 30px
+    }
   }
-
-
-
 
     /* ----------- iPad PRO ----------- */
     @media only screen 
@@ -378,6 +435,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
         .composeForm {
             padding-bottom: 503px;
         }
+    }
+
+    @media only screen
+        and (min-device-width: 1366px)
+        and (max-device-width: 1366px)
+        and (orientation: landscape)
+        and (-webkit-min-device-pixel-ratio: 2) {
+
+        .about-paragraph {
+            margin-left: 230px;
+        }  
     }
 
  /* ----------- Laptops ----------- */
