@@ -1,4 +1,3 @@
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -19,7 +18,6 @@ const aboutPageContent = "Ut ac ornare sapien, vel posuere ipsum. Sed pharetra d
 
 
 let posts = [];
-
 
 app.get("/", function (req, res) {
 
@@ -59,7 +57,6 @@ app.get("/contact", function (req, res) {
 
     res.render("contact");
 });
-
 
 app.get("/compose", function (req, res) {
 

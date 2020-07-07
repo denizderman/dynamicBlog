@@ -4,13 +4,13 @@
 
         <div class="social-media social-media-home">
                 <ul>
-                  <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                  <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                      <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                      <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+                      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
-              </div>
+        </div>
 
         <div class="row desktop">
 
@@ -25,23 +25,21 @@
                         <%  function myFunction(post) { %>
 
                         <h1> <%= post.title; %> </h1>
-                        
+
                         <p>
-                                <%= post.body.substring(0, 100) + "..."; %>
-                                <a href="/posts/<%= post.title %>">Read More</a>
+                             <%= post.body.substring(0, 100) + "..."; %>
+                             <a href="/posts/<%= post.title %>">Read More</a>
                         </p>
                         <%  } %>
                 </div>
+
                 <div class="col-3">
-
                         <img class="profilePic1" src="images/profilepic.jpg" alt="profilePicture">
-                        
-
                 </div>
         </div>
 
-
-
+        <!-- For Phones -->
+        
         <div class="mobile-first">
 
                 <img class="profilePic2" src="images/profilepicPortrait.jpg" alt="profilePicture">
@@ -51,20 +49,16 @@
                 <p class="motto"><i><%= homePage %></i></p>
 
                 <%  pagePosts.forEach(myFunction); %>
-                        <%  function myFunction(post) { %>
+                <%  function myFunction(post) { %>
 
-                        <h1 class="post-title"> <%= post.title; %> </h1>
-                        
-                        <p class="post-body">
-                                <%= post.body.substring(0, 100) + "..."; %>
-                                <a href="/posts/<%= post.title %>">Read More</a>
-                        </p>
-                        <%  } %>
+                <h1 class="post-title"> <%= post.title; %> </h1>
 
+                <p class="post-body">
+                        <%= post.body.substring(0, 100) + "..."; %>
+                        <a href="/posts/<%= post.title %>">Read More</a>
+                </p>
+                <%  } %>
         </div>
-
 </div>
-
-
 
 <%- include("partials/footer"); -%>

@@ -37,7 +37,7 @@ body {
     color: #b86551;
 }
 
-/* Header content */
+/* Header */
 
 .header-content {
     text-align: center;
@@ -79,7 +79,6 @@ body {
     max-width: 960px;
     margin: auto;
 }
-
 .motto {
     font-size: 30px;
     font-weight: 200;
@@ -90,7 +89,8 @@ body {
     margin-top: 250px;
 }
 
-/* about ejs */
+/* About ejs */
+
 .about-me {
     text-align: center;
 }
@@ -107,8 +107,7 @@ body {
     padding: 30px;
 }
 
-
-/*contact ejs */
+/* Contact ejs */
 
 .contactTitle, .contactGet {
     text-align: center;
@@ -118,7 +117,6 @@ body {
     width: 80%;
     margin-left: 100px;
 }
-
 .contactForm {
     margin: 50px 100px;
 }
@@ -159,7 +157,6 @@ body {
     margin-bottom: 0px;
     text-align: center;     
 }
-
 .footer-links li {
     list-style-type: none;
     display: inline;
@@ -192,18 +189,17 @@ body {
     color: #ebb2a2;
 }
 
-
 /* Responsive */
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 @media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
 
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2) {
+     /* Home page */
 
-     /* home page */
     .profilePic1 {
         display: none;
     }
@@ -232,7 +228,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
        left: 0em;
    }
 
-   /* about page */
+   /* About page */
 
    .hobbyimg {
        float: none;
@@ -248,7 +244,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
        padding: 30px;
    }
 
-   /* contact page */
+   /* Contact page */
 
    .contactInfoMessage {
         width: 300px;
@@ -261,16 +257,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
        margin-left: 20px;
    }
 
-   /* blog posts */
+   /* Blog posts */
     
   .post-title, .post-body {
       margin: 5px 15px;
-  }
+   }
   .postContent {
       margin: 15px auto;
       padding-right: 20px;
       padding-left: 20px;
-  }
+   }
 }
 
 @media only screen
@@ -278,11 +274,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     and (max-device-width: 568px)
     and (orientation: landscape) {
 
-        .about-paragraph {
+    .about-paragraph {
            width: 540px !important;
-        }
-    }
-
+   }
+}
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -291,23 +286,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2) {
      
-      /* home page */
+      /* Home page */
+
     .footer-links {
         width: 80%;
-    }
+   }
 
-    /* about page */
+    /* About page */
+
     .about-paragraph {
         width: 375px;
-    }
+   }
 
-    /* contact page */
+    /* Contact page */
 
     .contactInfoMessage {
         width: 90%;
         margin-top: -20px;
     }
- }
+}
 
  @media only screen
     and (min-device-width: 375px)
@@ -318,25 +315,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-right: auto;
         margin-left: auto;
         text-align: justify;
-    }
+   }
     .contactForm {
         margin-left: 35px;
-    }
-
+   }
 }
 
  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
  @media only screen
     and (min-device-width: 414px)
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3) {
     
-      /* home page */
-    .footer-links {
+      /* Home page */
+
+        .footer-links {
         width: 70%;
     }
-        
- }
+}
 
  @media only screen
     and (min-device-width: 414px)
@@ -346,18 +343,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
         .mobile-first {
             padding-right: 30px;
             padding-left: 30px;
-        }
+       }
         .hobbyimg {
             margin-left: 5px;
-        }
+       }
         .about-paragraph {
             width: auto;
-        }
+       }
         .contactInfoMessage {
             text-align: justify;
-        }
-    }
-
+       }
+}
     
  /* ----------- iPhone X ----------- */
 
@@ -367,10 +363,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     and (-webkit-min-device-pixel-ratio: 3) {
         
         /* Home page */
+
     .motto {
         margin: 5px 15px 50px 20px;
-    }
- }
+   }
+}
 
   /* ----------- iPad ----------- */
 
@@ -380,121 +377,124 @@ and (-webkit-min-device-pixel-ratio: 2) {
     and (-webkit-min-device-pixel-ratio: 1) {
 
         /* Home page */
+
     .desktop {
         margin-top: 30px;
-    }    
+   }    
     .col-9 {
         max-width: 45%;
         margin-left: 5%;
-    }
+   }
     .top {
         text-align: center;
         margin-top: 10px;
-    }
+   }
    
     /* About Page */
+
     .hobbyimg {
         float: none;
         display: block;
         margin: -10px auto;
         width: 50%;
-    }
+   }
     .about-paragraph {
         width: 90%;
         padding: 10px;
         margin: 20px auto;
-    }
+   }
 
     /* New Post page */
+
     .composeForm {
        padding-bottom: 160px;
-    }
+   }
 
     /* Post page */
+
     .postContent {
         margin: 15px auto;
         padding-right: 30px;
         padding-left: 30px
-    }
-  }
+   }
+}
 
     /* ----------- iPad PRO ----------- */
-    @media only screen 
+
+  @media only screen 
     and (min-device-width: 1024px)
     and (max-device-width: 1366px)
     and (-webkit-min-device-pixel-ratio: 2) {
-        .posts {
+
+    .posts {
             padding-bottom: 277px;
-        }
-        .about-paragraph {
+       }
+    .about-paragraph {
             padding-bottom: 229px;
-        }
-        .contactForm {
+       }
+    .contactForm {
             padding-bottom: 136px;
-        }
-        .composeForm {
+       }
+    .composeForm {
             padding-bottom: 503px;
-        }
-    }
+       }
+}
 
-    @media only screen
-        and (min-device-width: 1366px)
-        and (max-device-width: 1366px)
-        and (orientation: landscape)
-        and (-webkit-min-device-pixel-ratio: 2) {
+  @media only screen
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
 
-        .about-paragraph {
+    .about-paragraph {
             margin-left: 230px;
-        }  
-    }
+       }  
+}
 
  /* ----------- Laptops ----------- */
 
- @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+  @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
 
-      .hobbyimg {
+    .hobbyimg {
           margin-left: 230px;
-      }
+       }
 }
 
- @media only screen 
- and (min-device-width: 1600px)
- and (max-device-height: 900px)
- and (-webkit-min-device-pixel-ratio: 2) {
+  @media only screen 
+    and (min-device-width: 1600px)
+    and (max-device-height: 900px)
+    and (-webkit-min-device-pixel-ratio: 2) {
     
     .hobbyimg {
         margin-left: 400px;
-    }
+   }
     .composeForm {
         padding-bottom: 85px;
-    }
+   }
+}
 
- }
-
-@media only screen
+  @media only screen
     and (min-device-width: 320px)
     and (max-device-width: 1024px) {
+
         .social-media {
-            display: none;
-        }
-    }
-
-
+         display: none;
+       }
+}
 
  @media only screen and (min-device-width: 768px) {
 
-    .mobile-first, .social-media-home {
+        .mobile-first, .social-media-home {
         display: none;
-    }
-    
+   }
 } 
 
 @media only screen and (max-device-width: 760px) {
-    .desktop {
+
+        .desktop {
         display: none;
-    }
-    
+   }
 }
