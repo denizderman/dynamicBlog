@@ -13,11 +13,13 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://admin-deniz:BackendWebsiteProjectsMongo2@cluster0.nmsht.mongodb.net/<dbname>?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+
+
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, "connection error"));
-db.once("open", function() {
+db.once("open", function () {
     console.log("It is connected");
 });
 
@@ -35,7 +37,7 @@ const aboutPageContent = "Ut ac ornare sapien, vel posuere ipsum. Sed pharetra d
 
 app.get("/", function (req, res) {
 
-    Post.find({}, function(err, posts) {
+    Post.find({}, function (err, posts) {
 
         res.render("home", {
             homePage: homePageContent,
@@ -44,17 +46,17 @@ app.get("/", function (req, res) {
     });
 });
 
-app.get("/posts/:postId", function(req, res){
+app.get("/posts/:postId", function (req, res) {
 
     const requestedPostId = req.params.postId;
-    
-      Post.findOne({_id: requestedPostId}, function(err, post){
+
+    Post.findOne({ _id: requestedPostId }, function (err, post) {
         res.render("post", {
-          title: post.title,
-          content: post.content
+            title: post.title,
+            content: post.content
         });
-      });
     });
+});
 
 
 app.get("/about", function (req, res) {
@@ -83,8 +85,12 @@ app.post("/", function (req, res) {
 
     post.save();
     res.redirect("/");
- });
+});
 
-app.listen(3000, function () {
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+app.listen(port, function() {
     console.log("Server started on port 3000");
- });
+});
