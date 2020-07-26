@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 
-mongoose.connect("mongodb+srv://admin-deniz:BackendWebsiteProjectsMongo2@cluster0.nmsht.mongodb.net/<dbname>?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://admin-deniz:BackendWebsiteProjectsMongo2@cluster0.nmsht.mongodb.net/blogDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
